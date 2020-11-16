@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize')
-const sequelize = require('./controllers/database')
+const sequelize = require('../controllers/database')
 
 const Project = sequelize.define('project', {
     id: {
@@ -10,27 +10,27 @@ const Project = sequelize.define('project', {
     },
 
     title: {
-        label: DataTypes.STRING,
+        type: DataTypes.STRING,
         allowNull: false,
     },
 
     preview: {
-        label: DataTypes.TEXT,
+        type: DataTypes.TEXT,
         allowNull: false,
     },
 
     description: {
-        label: DataTypes.TEXT,
+        type: DataTypes.TEXT,
         allowNull: false,
     },
 
     githublink: {
-        label: DataTypes.STRING,
+        type: DataTypes.STRING,
         allowNull: false,
     },
 
     photo: {
-        label: DataTypes.STRING,
+        type: DataTypes.STRING,
         allowNull: false,
     }
 })

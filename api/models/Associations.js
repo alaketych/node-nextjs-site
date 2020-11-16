@@ -4,7 +4,7 @@ const Project = require('./Project')
 const Category = require('./Category')
 const Development = require('./Development')
 
-const sequelize = require('./controllers/database')
+const sequelize = require('../controllers/database')
 
 //Create M:M Table Associations
 const PostCategory = sequelize.define('postcategory', {})
