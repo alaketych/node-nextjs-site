@@ -2,7 +2,10 @@ const { Sequelize } = require('sequelize')
 
 const sequelize = new Sequelize({
     dialect: 'sqlite',
-    storage: '../blog.sqlite'
+    storage: '../blog.sqlite',
+    define: {
+        timestamps: false,
+    },
 })
 
 sequelize.authenticate()
@@ -12,8 +15,5 @@ sequelize.authenticate()
     .catch(error => {
         console.log('Unable to connect to the database')
     })
-
-sequelize.sync()
-sequelize.sync({ force: false })
 
 module.exports = sequelize
