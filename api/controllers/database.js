@@ -2,7 +2,7 @@ const { Sequelize } = require('sequelize')
 
 const sequelize = new Sequelize({
     dialect: 'sqlite',
-    storage: '../blog.sqlite',
+    storage: './blog.sqlite',
     define: {
         timestamps: false,
     },
