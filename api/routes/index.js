@@ -15,6 +15,12 @@ router.get('/projects', projectController.getProjects)
 router.get('/post/:id', postsController.getPost)
 router.get('/project/:id', projectController.getProject)
 
-router.post('/contact')
+router.get('/contact', (request, response) => {
+    response.send('asd')
+})
+router.post('/contact', (request, response) => {
+    console.log('Got body: ', request.body)
+    response.send('arrived.')
+})
 
 module.exports = router
