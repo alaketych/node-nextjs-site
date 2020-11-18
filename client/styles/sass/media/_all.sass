@@ -1,0 +1,138 @@
+@import 'elements'
+@import 'spacing'
+@import 'breakpoints'
+
+@media only screen and (max-width: $breakpoint-mobile)
+    .wrapper
+        max-width: 85%
+
+    .header
+        padding: 0px
+
+        .logo
+            margin: 0 auto
+
+        .navigation
+            display: none
+
+    .banner, .block
+        text-align: center
+
+        .project-view
+            display: flex
+            justify-content: center
+
+            &__content
+                flex-direction: column
+                justify-content: center
+
+            .overlay
+                width: 90%
+                padding: 0px
+                margin-bottom: 10px
+
+            &__layout
+                margin-bottom: 0px
+                box-shadow: 0 1px 5px rgba(0,0,0,.05), 0 5px 30px rgba(0,0,0, .1)
+
+            .substance
+                margin: 0px
+                width: 100%
+
+                .array
+                    display: flex
+                    flex-direction: row
+                    justify-content: space-between
+                    padding-top: 15px
+
+        .service
+            width: 100%
+            margin-bottom: 25px
+
+            .title
+                margin: 10px 0px 13px
+                font-size: 18px
+
+        .array
+            display: flex
+            flex-direction: column
+
+            .article
+                width: 100%
+
+        form
+            width: 90%
+
+        footer
+            font-size: 5px
+
+@media only screen and ( max-width: $breakpoint-medium)
+    .wrapper
+        max-width: 90%
+
+    .banner, .block
+        text-align: center
+
+        .project-view
+            display: flex
+            justify-content: center
+
+            &__content
+                flex-direction: column
+                justify-content: center
+
+            .overlay
+                width: 100%
+                padding: 0px
+                margin-bottom: 10px
+
+            &__layout
+                margin-bottom: 0px
+                box-shadow: 0 1px 5px rgba(0,0,0,.05), 0 5px 30px rgba(0,0,0,.1)
+
+            .substance
+                margin: 0px
+                width: 100%
+
+                .list
+                    width: 100%
+                    flex-wrap: wrap
+                    flex-direction: row
+                    justify-content: space-around
+
+                    .item
+                        margin: 0
+
+                .array
+                    display: flex
+                    padding-top: 15px
+                    flex-direction: row
+                    justify-content: space-evenly
+
+        .service
+            width: 100%
+            margin-bottom: 25px
+
+            .title
+                margin: 10px 0px 13px
+                font-size: 18px
+
+        .array
+            display: flex
+            flex-direction: column
+
+            .article
+                width: 100%
+
+        form
+            width: 100%
+
+@media only screen and (max-width: $breakpoint-tablet)
+    .wrapper
+        max-width: 95%
+
+    .project-view
+        .overlay
+            background: transparent
+        &__layout
+            width: 125%
