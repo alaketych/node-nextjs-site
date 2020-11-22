@@ -1,11 +1,11 @@
 const express = require('express')
 const router = express.Router()
 
-//const datarecords = require('../data/_index')
+//const datarecords = require('../data/recordAssociations')
+
 const database = require('../controllers/database')
 const postsController = require('../controllers/Post')
 const projectController = require('../controllers/Project')
-
 
 database.sync({ force: false })
 
@@ -18,6 +18,14 @@ router.get('/project/:id', projectController.getProject)
 router.get('/contact', (request, response) => {
     response.send('asd')
 })
+
+
+//
+const projectStacksController = require('../controllers/ProjectStack')
+router.get('/asd', projectStacksController.getProjectStack)
+//
+
+
 router.post('/contact', (request, response) => {
     console.log('Got body: ', request.body)
     response.send('arrived.')
