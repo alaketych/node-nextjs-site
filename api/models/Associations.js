@@ -10,7 +10,7 @@ const sequelize = require('../controllers/database')
 
 //Create M:M Table Associations
 const PostCategory = sequelize.define('postcategory', {
-    PostId: {
+    postId: {
         type: DataTypes.INTEGER,
         references: {
             model: Post,
@@ -18,7 +18,7 @@ const PostCategory = sequelize.define('postcategory', {
         }
     },
 
-    CategoryId: {
+    categoryId: {
         type: DataTypes.INTEGER,
         references: {
             model: Category,
@@ -28,7 +28,7 @@ const PostCategory = sequelize.define('postcategory', {
 })
 
 const ProjectStack = sequelize.define('projectstack', {
-    ProjectId: {
+    projectId: {
         type: DataTypes.INTEGER,
         references: {
             model: Project,
@@ -36,7 +36,7 @@ const ProjectStack = sequelize.define('projectstack', {
         }
     },
 
-    StackId: {
+    stackId: {
         type: DataTypes.INTEGER,
         references: {
             model: Stack,
@@ -46,7 +46,7 @@ const ProjectStack = sequelize.define('projectstack', {
 })
 
 const ProjectDevelopment = sequelize.define('projectdevelopment', {
-    ProjectId:  {
+    projectId:  {
         type: DataTypes.INTEGER,
         references: {
             model: Project,
@@ -54,7 +54,7 @@ const ProjectDevelopment = sequelize.define('projectdevelopment', {
         }
     },
 
-    DevelopmentId: {
+    developmentId: {
         type: DataTypes.INTEGER,
         references: {
             model: Development,
