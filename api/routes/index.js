@@ -1,13 +1,11 @@
 const express = require('express')
 const router = express.Router()
 
-//const datarecords = require('../data/recordAssociations')
-
 const database = require('../controllers/database')
 const postsController = require('../controllers/Post')
 const projectController = require('../controllers/Project')
 
-database.sync({ force: false })
+database.sync({ force: true })
 
 router.get('/posts', postsController.getPosts)
 router.get('/projects', projectController.getProjects)
