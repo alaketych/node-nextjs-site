@@ -105,7 +105,11 @@ function Home({ projects, articles }) {
                                         key={ article.id }
                                         link={ article.id }
                                         article={ article.title }
-                                        category={ null }
+                                        category={
+                                            article.categories.map(category => {
+                                                return category.label
+                                            })
+                                        }
                                     />
                                 )
                             })

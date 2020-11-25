@@ -1,5 +1,5 @@
 import React from 'react'
-import { getPosts } from './../api/fetch'
+import { getPosts, getPostCategories } from './../api/fetch'
 import { PageTitle, Article } from '../../components/_index'
 
 function Posts({ articles }) {
@@ -24,7 +24,11 @@ function Posts({ articles }) {
                                         link={ article.id }
                                         article={ article.title }
                                         textPreview={ article.content }
-                                        category={ article.label }
+                                        category={
+                                            article.categories.map(category => {
+                                                return category.label
+                                            })
+                                        }
                                     />
                                 )
                             })
@@ -42,7 +46,7 @@ export async function getStaticProps() {
 
     return {
         props: {
-            articles
+            articles,
         }
     }
 }

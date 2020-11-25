@@ -76,8 +76,13 @@ function About({ articles }) {
                                         key={ article.id }
                                         article={ article.title }
                                         textPreview={ article.body }
-                                        link="/posts/2"
+                                        link={ article.id }
                                         publicationDate={ article.publicationDate }
+                                        category={
+                                            article.categories.map(category => {
+                                                return category.label
+                                            })
+                                        }
                                     />
                                 )
                             })
