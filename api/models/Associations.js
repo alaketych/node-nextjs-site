@@ -65,7 +65,7 @@ const ProjectDevelopment = sequelize.define('projectdevelopment', {
 
 //M:M Associations
 Post.belongsToMany(Category, { through: PostCategory })
-Category.belongsToMany(Post, { through: Post })
+Category.belongsToMany(Post, { through: PostCategory })
 
 Project.belongsToMany(Stack, { through: ProjectStack })
 Project.belongsToMany(Development, { through: ProjectDevelopment })
